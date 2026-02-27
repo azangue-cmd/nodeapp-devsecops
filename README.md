@@ -5,7 +5,7 @@
 This dashboard shows: - Error rate (%) - Latency p95 (ms) - Requests per
 second (RPS)
 
-![Application Dashboard](image_1.png)
+![Application Dashboard](images/im1.PNG)
 
 ------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ second (RPS)
 This dashboard displays: - CPU usage - RAM usage - Disk usage - Network
 traffic
 
-![Node Exporter Dashboard](image_2.png)
+![Node Exporter Dashboard](images/im2.PNG)
 
 ------------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ Here we verify that Prometheus correctly collects application metrics
 such as: - `http_requests_total` - Status codes (200, 500, etc.) -
 Route-specific metrics
 
-![Prometheus Metrics](image_3.png)
+![Prometheus Metrics](images/im3.PNG)
 
 ------------------------------------------------------------------------
 
