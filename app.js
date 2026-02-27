@@ -35,18 +35,22 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello DevSecOps!' });
-});
-
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
-});
-
-app.get('/metrics', async (req, res) => {
-  res.set('Content-Type', register.contentType);
-  res.end(await register.metrics());
-});
-
-app.listen(3000, () => {
-  console.log('App démarrée sur le port 3000');
-});
+    res.json({ message: 'Hello DevSecOps!' });
+  });
+  
+  app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+  });
+  
+  app.get('/error', (req, res) => {
+    res.status(500).json({ error: 'Internal error' });
+  });
+  
+  app.get('/metrics', async (req, res) => {
+    res.set('Content-Type', register.contentType);
+    res.end(await register.metrics());
+  });
+  
+  app.listen(3000, () => {
+    console.log('App démarrée sur le port 3000');
+  });
